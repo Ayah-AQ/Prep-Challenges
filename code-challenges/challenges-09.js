@@ -109,17 +109,17 @@ const roundDecimals = (arr) => {
 // ]
 //
 
-const employeesBonus = (arr) => { 
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i].workHours >8){
-            arr[i].salary = arr[i].salary.substring(0, arr[i].salary.length-1);
-            arr[i].salary = `${Number(arr[i].salary)+100}$`;
-        }else{
-            arr[i].salary = arr[i].salary.substring(0, arr[i].salary.length-1);
-            arr[i].salary = `${Number(arr[i].salary)+50}$`;
+const employeesBonus = (arr) => {
+
+    let tempSalary;
+    arr.forEach(element => {
+        if (element.workHours > 8) {
+            element.salary = `${parseInt(element.salary)+ 100}$`;
         }
-    }
-    return arr ;
+        else {
+            element.salary = `${parseInt(element.salary)+ 50}$`;}
+    });
+    return arr;
 }
 
 
