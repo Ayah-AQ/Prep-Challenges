@@ -69,10 +69,10 @@ const isPalindrome = (str) => {
         arr.push(small[i])
     }
     }
-    let originalString = arr.join('')
-    let reverseString = arr.reverse().join('')
+    let originStr = arr.join('')
+    let reverseStr = arr.reverse().join('')
 
-    return originalString===reverseString
+    return originStr===reverseStr
 }
 // -------------------------------------------------------------------------------------------------------
 
